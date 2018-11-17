@@ -14,9 +14,9 @@ source:
   sha256: e6dfa2bd6f4a259feb54a9c910b21cfbb2b22efc4506d8e23007b75080074244
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 1
-  skip: true  # [win32]
+  number: 1001
   rpaths:
     - lib/R/lib/
     - lib/
@@ -42,8 +42,7 @@ about:
   summary: Themes for use with Shiny. Includes several Bootstrap themes from <http://bootswatch.com/>,
     which are packaged for use with Shiny applications.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
