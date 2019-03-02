@@ -1,4 +1,4 @@
-{% set version = '1.1.1' %}
+{% set version = '1.1.2' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: shinythemes_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/shinythemes_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/shinythemes/shinythemes_{{ version }}.tar.gz
-  sha256: e6dfa2bd6f4a259feb54a9c910b21cfbb2b22efc4506d8e23007b75080074244
+  sha256: 2e13d4d5317fc61082e8f3128b15e0b10ed9736ce81e152dd7ae7f6109f9b18a
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1001
+  number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -37,7 +36,7 @@ test:
     - "\"%R%\" -e \"library('shinythemes')\""  # [win]
 
 about:
-  home: https://CRAN.R-project.org/package=shinythemes
+  home: http://rstudio.github.io/shinythemes/
   license: GPL-3
   summary: Themes for use with Shiny. Includes several Bootstrap themes from <http://bootswatch.com/>,
     which are packaged for use with Shiny applications.
@@ -46,9 +45,21 @@ about:
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
+
+# Package: shinythemes
+# Title: Themes for Shiny
+# Version: 1.1.2
+# Authors@R: c( person("Winston", "Chang", role = c("aut", "cre"), email = "winston@rstudio.com"), person(family = "RStudio", role = "cph"), person("Thomas", "Park", role = c("ctb", "cph"), comment = "Bootswatch themes"), person("Lukasz", "Dziedzic", role = c("ctb", "cph"), comment = "Lato font"), person("Nathan", "Willis", role = c("ctb", "cph"), comment = "News Cycle font"), person(family = "Google Corporation", role = c("ctb", "cph"), comment = "Open Sans and Roboto fonts"), person("Matt", "McInerney", role = c("ctb", "cph"), comment = "Raleway font"), person(family = "Adobe Systems Incorporated", role = c("ctb", "cph"), comment = "Source Sans Pro font"), person(family = "Canonical Ltd", role = c("ctb", "cph"), comment = "Ubuntu font") )
+# Description: Themes for use with Shiny. Includes several Bootstrap themes from <http://bootswatch.com/>, which are packaged for use with Shiny applications.
+# Depends: R (>= 3.0.0)
+# Imports: shiny (>= 0.11)
+# URL: http://rstudio.github.io/shinythemes/
+# License: GPL-3 | file LICENSE
+# RoxygenNote: 6.1.0.9000
+# NeedsCompilation: no
+# Packaged: 2018-11-06 16:28:32 UTC; winston
+# Author: Winston Chang [aut, cre], RStudio [cph], Thomas Park [ctb, cph] (Bootswatch themes), Lukasz Dziedzic [ctb, cph] (Lato font), Nathan Willis [ctb, cph] (News Cycle font), Google Corporation [ctb, cph] (Open Sans and Roboto fonts), Matt McInerney [ctb, cph] (Raleway font), Adobe Systems Incorporated [ctb, cph] (Source Sans Pro font), Canonical Ltd [ctb, cph] (Ubuntu font)
+# Maintainer: Winston Chang <winston@rstudio.com>
+# Repository: CRAN
+# Date/Publication: 2018-11-06 17:00:03 UTC
