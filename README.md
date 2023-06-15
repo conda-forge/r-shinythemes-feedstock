@@ -1,11 +1,11 @@
-About r-shinythemes
-===================
+About r-shinythemes-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-shinythemes-feedstock/blob/main/LICENSE.txt)
 
 Home: http://rstudio.github.io/shinythemes/
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-shinythemes-feedstock/blob/main/LICENSE.txt)
 
 Summary: Themes for use with Shiny. Includes several Bootstrap themes from <http://bootswatch.com/>, which are packaged for use with Shiny applications.
 
